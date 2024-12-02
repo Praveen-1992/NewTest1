@@ -12,19 +12,19 @@ inputs:
     description: ZebraTester test plan to execute
   results-file:
     required: false
-    description: Where to store the results e.g., result.csv
-    default: result.jtl    
+    description: Where to store the results, e.g., result.jtl
+    default: result.jtl
   args:
     required: false
-    description: Optional arguments. For more details https://jmeter.apache.org/usermanual/get-started.html#non_gui
+    description: Optional arguments for ZebraTester execution
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  - "-n"
-  - "-t"
-  - "${{ inputs.test-plan-path }}"
-  - "-l"
-  - "${{ inputs.results-file }}"
-  - "${{ inputs.args }}"
+    - "-n"
+    - "-t"
+    - "${{ inputs.test-plan-path }}"
+    - "-l"
+    - "${{ inputs.results-file }}"
+    - ${{ inputs.args }}
