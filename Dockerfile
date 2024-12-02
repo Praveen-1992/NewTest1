@@ -9,7 +9,7 @@ RUN apk add --no-cache wget
 
 # Ensure the target directory exists before downloading the JAR file
 RUN mkdir -p /home/pravi/ZebraTester/Container/
-RUN mkdir -p /home/pravi/ZebraTester/Container/lib  # Ensure the lib directory exists
+RUN mkdir -p /home/pravi/ZebraTester/Container/lib
 
 # Download xercesImpl JAR if required
 RUN wget https://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar -P /home/pravi/ZebraTester/Container/
@@ -30,5 +30,6 @@ RUN chmod +x /app/run.sh
 # Expose necessary ports
 EXPOSE 7993
 
-# Run the entrypoint and the run script
-CMD ["sh", "-c", "./entrypoint.sh && ./run.sh"]
+# Use entrypoint and CMD to handle arguments
+ENTRYPOINT ["sh", "/app/entrypoint.sh"]
+CMD ["sh", "/app/run.sh"]
