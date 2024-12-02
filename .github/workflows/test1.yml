@@ -1,0 +1,18 @@
+on: 
+  push:
+    branches:
+      - main  # Run on pushes to the main branch
+
+jobs:
+  zebratest_job:
+    runs-on: self-hosted
+    name: Zebra Test Execution
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
+      
+      - name: Run Zebra Tests
+        uses: ./
+        with:
+          test-plan-path: ./Platform_Prod_US_v2.class
+          args: "-u 1 -d 90 -t 60 -sdelay 200 -maxloops 1 -sampling 15 -percpage 100 -percurl 20 -maxerrmem 20 -nolog"
