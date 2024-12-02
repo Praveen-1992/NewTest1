@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loadTestTemplate>
+  <proxySnifferVersion>V5.5-S</proxySnifferVersion>
+  <loadTestProgramPath>C:\ZebraTester55F\MyTests\A_PROD_Build_Tests\Login\Login_Radancy_ASM_DomainChange_v3.class</loadTestProgramPath>
+  <startFromExecAgentName>Local Exec Agent</startFromExecAgentName>
+  <startFromClusterName></startFromClusterName>
+  <isPureJUnitLoadTest>false</isPureJUnitLoadTest>
+  <executionPlanFilePath></executionPlanFilePath>
+  <concurrentUsers>1</concurrentUsers>
+  <testDuration>60</testDuration>
+  <loopsPerUser>1</loopsPerUser>
+  <pacingPerLoop>0</pacingPerLoop>
+  <startupDelayPerUser>200</startupDelayPerUser>
+  <downlinkBandwidth>0</downlinkBandwidth>
+  <uplinkBandwidth>0</uplinkBandwidth>
+  <requestTimeout>60</requestTimeout>
+  <maxErrorSnapshots>-20</maxErrorSnapshots>
+  <statisticSamplingInterval>15</statisticSamplingInterval>
+  <percentilePageSamplingPercent>100</percentilePageSamplingPercent>
+  <percentileUrlSamplingPercent>20</percentileUrlSamplingPercent>
+  <percentileUrlSamplingPercentAddOption>0</percentileUrlSamplingPercentAddOption>
+  <debugOptions></debugOptions>
+  <additionalOptions></additionalOptions>
+  <sslOptions>all</sslOptions>
+  <pmaTemplateFileName></pmaTemplateFileName>
+  <testRunAnnotation></testRunAnnotation>
+  <userAgent></userAgent>
+  <browserLan>en</browserLan>
+  <enableBrowserCache>false</enableBrowserCache>
+  <checkNewVersion>false</checkNewVersion>
+  <browserCacheOptions></browserCacheOptions>
+  <userInputFields/>
+</loadTestTemplate>
