@@ -21,10 +21,11 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  build: .
   args:
-    - "-n"
     - "-t"
     - "${{ inputs.test-plan-path }}"
     - "-l"
     - "${{ inputs.results-file }}"
-    - ${{ inputs.args }}
+    - "${{ inputs.args }}"
+
